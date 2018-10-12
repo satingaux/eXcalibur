@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!--  control the top header color -->
+  <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#304FFE">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#304FFE">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#304FFE">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAxXvBrotnre0n9FgxixVSSA_d1RdsuVg4",
+    authDomain: "qbanknitkkr.firebaseapp.com",
+    databaseURL: "https://qbanknitkkr.firebaseio.com",
+    projectId: "qbanknitkkr",
+    storageBucket: "qbanknitkkr.appspot.com",
+    messagingSenderId: "248015889346"
+  };
+  firebase.initializeApp(config);
+
+      googleSignIn=()=>{
+        base_provider=new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(base_provider).then(function(result){
+          console.log(result);console.log("Success.");window.location.href = "home_page.html";
+        }).catch(function(err){console.log("Fail.")})
+      }
+    
+</script>
+<!-- sasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss -->
+<link rel="icon" type="image" href="favicon.png">
+    <title style=" font-family: 'Montserrat', sans-serif;">New Event</title>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(96,96,96,0.87); font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
+      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
+      #message h2 { color: #606060; font-weight: bold; font-size: 26px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: all black; }
+        body { border-top: 10px solid blue }
+      }
+    </style>  
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
+  </head>
+  <body style="background-color: blue;">
+    <div class="container">
+    <div id="message" style="text-align: center;">
+      <h3 style="color: black; font-family: 'Montserrat', sans-serif;font-size: 40px;color: blue;text-align: center;">Create Event</h3><hr>
+      <br>
+
+      <a style="background-color:transparent;width: 90%;margin: 10% auto;margin-top: 30%;
+       "data-toggle="collapse" data-target="#firstyrcatalog">
+      <h2 style="color: blue;">Choose Up</h2><div class="collapse" id="firstyrcatalog"><hr>
+      <h1 onclick="googleSignIn()">Auto-Riksha</h1>
+      <h1 onclick="location.href='404.html">Cab</h1>
+      <h1 onclick="location.href='404.html'">Bus</h1>
+      <h1 onclick="location.href='404.html'">Bike</h1>
+      <h1 onclick="location.href='404.html'">Flight</h1>
+    </div></a><h1 onclick="location.href='home_page.html'" style="margin-bottom: 25%;">Skip</h1>
+    <br><br><br><br><br><br>
+</div>
+
+    
+     
+
+      <!-- <div  id="message" style="text-align: center;width: 100%;margin: 10% auto;" >
+      <a href="https://sites.google.com/view/satingaux" style="width: 90%;background-color: transparent;margin: 0 auto;">
+      <img src="favicon.png"  style="width: 30%;margin: 0 auto;"></a>
+     </div> -->
+  </body>
+</html>

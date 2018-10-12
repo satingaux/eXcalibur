@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!--  control the top header color -->
+  <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#304FFE">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#304FFE">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#304FFE">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- sasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss -->
+<link rel="icon" type="image" href="favicon.jpg">
+    <title style=" font-family: 'Montserrat', sans-serif;">Question Bank</title>
+
+    <style media="screen">
+      body {  background: #ECEFF1; color: rgba(96,96,96,0.87); font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
+      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
+      #message h2 { color: #606060; font-weight: bold; font-size: 26px; margin: 0 0 0px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: all black; }
+        body { border-top: 15px solid blue }
+      }
+    </style>  
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
+  </head>
+  <body style="background-color: blue;" id="load">
+    <div class="container">
+    <div id="message" style="text-align: center;">
+      <h3 style="color: black; font-family: 'Montserrat', sans-serif;font-size: 40px;color: blue;">Catalog</h3><hr>
+      <br>
+
+      <a style="background-color:transparent;width: 90%;margin: 0 auto;
+       "data-toggle="collapse" data-target="#firstyrcatalog">
+      <h2>First Year</h2>
+      <div class="collapse" id="firstyrcatalog">
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#co1subjects" style="width: 90%;margin: 0 auto;"><h1>Comp./I.T.</h1>
+      <div  id="co1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse" ><hr>
+      <div onclick="window.location.href='viewpro.html?I&CS&PHY'">Physics</div><div onclick="window.location.href='viewpro.html?I&CS&CHEM'" >Chemistry</div><div onclick="window.location.href='viewpro.html?I&CS&MATH'">Maths</div><div onclick="window.location.href='viewpro.html?I&CS&BOP'">B.O.P.</div><div onclick="window.location.href='viewpro.html?I&CS&BS'">B.S.</div></div></a><br>
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#civ1subjects" style="width: 90%;margin: 0 auto;"><h1>Civil</h1>
+        <div  id="civ1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&CIV&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&CIV&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&CIV&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&CIV&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&CIV&BS'">B.S.</div></div></a><br>
+
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#mec1subjects" style="width: 90%;margin: 0 auto;"><h1>Mechanical</h1>
+      <div  id="mec1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&MECH&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&MECH&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&MECH&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&MECH&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&MECH&BS'">B.S.</div></div></a><br>
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#ee1subjects" style="width: 90%;margin: 0 auto;"><h1>Electrical</h1>
+      <div  id="ee1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&EE&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&EE&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&EE&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&EE&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&EE&BS'">B.S.</div></div></a><br>
+
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#ece1subjects" style="width: 90%;margin: 0 auto;"><h1>E.C.E.</h1>
+      <div  id="ece1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&ECE&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&ECE&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&ECE&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&ECE&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&ECE&BS'">B.S.</div></div></a><br>
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#pie1subjects" style="width: 90%;margin: 0 auto;"><h1>Production</h1>
+      <div  id="pie1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&PIE&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&PIE&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&PIE&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&PIE&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&PIE&BS'">B.S.</div></div></a><br>
+
+    </div>
+    </a><br>
+
+<a style="background-color:transparent;width: 90%;margin: 0 auto;
+       "data-toggle="collapse" data-target="#secondyrcatalog">
+      <h2>Second Year</h2><div class="collapse" id="secondyrcatalog">
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#co2subjects" style="width: 90%;margin: 0 auto;"><h1>Comp./I.T.</h1>
+      <div  id="co2subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse" ><hr>
+      <div onclick="window.location.href='viewpro.html?II&CS&DMATH'">Discrete Maths</div><div onclick="window.location.href='viewpro.html?II&CS&DAA'" >D.A.A.</div><div onclick="window.location.href='viewpro.html?II&CS&JAVA'">JAVA</div><div onclick="window.location.href='viewpro.html?II&CS&DBMS'">DBMS</div><div onclick="window.location.href='viewpro.html?II&CS&SE'">Software Eng.</div><div onclick="window.location.href='viewpro.html?II&CS&COA'">C.O.A.</div><div onclick="window.location.href='viewpro.html?II&CS&OS'">Operating System</div><div onclick="window.location.href='viewpro.html?II&CS&MICRO'">Microprocessor and Interfacing</div><div onclick="window.location.href='viewpro.html?II&CS&LINUX'">UNIX and LINUX</div><div onclick="window.location.href='viewpro.html?II&CS&CN'">Computer Networks</div><div onclick="window.location.href='viewpro.html?II&CS&ADVJAVA'">Adv. JAVA</div><div onclick="window.location.href='viewpro.html?II&CS&PYTHON'">Python</div><div onclick="window.location.href='viewpro.html?II&CS&CRYPTO'">No. Thory and Cryptography</div><div onclick="window.location.href='viewpro.html?II&CS&STOCHASTICANDQUEING'">Stochastic and Queing Process</div><div onclick="window.location.href='viewpro.html?II&CS&SOFTPROJECTMANAGEMENT'">Software Project Management</div><div onclick="window.location.href='viewpro.html?II&CS&DATAMINE'">Data Mining and Warehousing</div></div></a><br>
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#civ1subjects" style="width: 90%;margin: 0 auto;"><h1>Civil</h1>
+        <div  id="civ1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&CIV&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&CIV&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&CIV&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&CIV&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&CIV&BS'">B.S.</div></div></a><br>
+
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#mec1subjects" style="width: 90%;margin: 0 auto;"><h1>Mechanical</h1>
+      <div  id="mec1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&MECH&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&MECH&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&MECH&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&MECH&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&MECH&BS'">B.S.</div></div></a><br>
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#ee1subjects" style="width: 90%;margin: 0 auto;"><h1>Electrical</h1>
+      <div  id="ee1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&EE&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&EE&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&EE&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&EE&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&EE&BS'">B.S.</div></div></a><br>
+
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#ece1subjects" style="width: 90%;margin: 0 auto;"><h1>E.C.E.</h1>
+      <div  id="ece1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&ECE&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&ECE&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&ECE&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&ECE&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&ECE&BS'">B.S.</div></div></a><br>
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#pie1subjects" style="width: 90%;margin: 0 auto;"><h1>Production</h1>
+      <div  id="pie1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse"><hr>
+      <div onclick="window.location.href='viewpro.html?I&PIE&PHY'">Physics</div><br><div onclick="window.location.href='viewpro.html?I&PIE&CHEM'" >Chemistry</div><br><div onclick="window.location.href='viewpro.html?I&PIE&MATH'">Maths</div><br><div onclick="window.location.href='viewpro.html?I&PIE&BOP'">B.O.P.</div><br><div onclick="window.location.href='viewpro.html?I&PIE&BS'">B.S.</div></div></a><br>
+</div>
+    
+    </a><br>
+
+<a style="background-color:transparent;width: 90%;margin: 0 auto;
+       "data-toggle="collapse" data-target="#thirdyrcatalog">
+      <h2>Third Year</h2><div class="collapse" id="thirdyrcatalog"><hr>
+      <h1 onclick="location.href='co1subjects.html'">Computer/I.T.</h1>
+      <h1 onclick="location.href='co1subjects.html'">Civil</h1>
+      <h1 onclick="location.href='co1subjects.html'">Mechanical</h1>
+      <h1 onclick="location.href='co1subjects.html'">Electrical</h1>
+      <h1 onclick="location.href='co1subjects.html'">E.C.E.</h1>
+      <h1 onclick="location.href='co1subjects.html'">Production</h1>
+    </div>
+    </a><br>
+
+    <a style="background-color:transparent;width: 90%;margin: 0 auto;
+       "data-toggle="collapse" data-target="#forthyrcatalog">
+      <h2>Forth Year</h2><div class="collapse" id="forthyrcatalog"><hr>
+      <h1 onclick="location.href='co1subjects.html'">Computer/I.T.</h1>
+      <h1 onclick="location.href='co1subjects.html'">Civil</h1>
+      <h1 onclick="location.href='co1subjects.html'">Mechanical</h1>
+      <h1 onclick="location.href='co1subjects.html'">Electrical</h1>
+      <h1 onclick="location.href='co1subjects.html'">E.C.E.</h1> 
+      <h1 onclick="location.href='co1subjects.html'">Production</h1>
+    </div>
+    </a><br><br><br><br><hr>
+ </div>
+    </div>
+      
+
+    
+     
+
+      <div  id="message" style="text-align: center;width: 90%;margin: 10% auto;" >
+      <a href="https://sites.google.com/view/satingaux" style="width: 90%;background-color: transparent;margin: 0 auto;">
+      <img src="favicon.jpg"  style="width: 40%;margin: 0 auto;"></a>
+     </div>
+  </body>
+</html>
