@@ -1,6 +1,3 @@
 # eXcalibur
-Pool Up
-
-<br>
-Link to Host
+Pool Up(Deployed URL)
 ## https://letsjoinapool.firebaseapp.com/
