@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--  control the top header color -->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#304FFE">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#304FFE">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#304FFE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+<link rel="manifest" href="/manifest.json">
+<!-- Add to home screen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Template PWA">
+<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+<!-- Windows -->
+<meta name="msapplication-TileImage" content="favicon.jpg">
+<meta name="msapplication-TileColor" content="#304FFE">
+<link rel="icon"
+         type="image/png"
+         href="favicon.jpg">
+<title>Pool Up</title>
+<script src="script.js"></script>
+<style media="screen">
+      body {  background: #ECEFF1; color: rgba(96,96,96,0.87); font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; }
+      #message { background: white; border-radius: 3px; }
+      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
+      #message h2 { color: #606060; font-weight: bold; font-size: 26px; margin: 0 0 0 0px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 100vw;) {
+        body, #message { margin-top: 0; background: white; box-shadow: all black; }
+        body { border-top: 15px solid blue }
+      }
+</style>  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--    <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+                           $(".container").addClass("open-sidebar");
+                           return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+      
+    </script> -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<!-- <div class="container">
+  <div id="sidebar" style="text-align: center;">
+    <i class="material-icons" style="font-size: 80px !important;">rv_hookup</i>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Sign Out</a></li>
+    </ul>
+  </div>
+<div class="main-content">
+<div id="head">
+  <h1 style="margin-left: 20%;">Auto Pool</h1>
+</div>
+<div class="swipe-area"></div>
+  <a href="#" data-toggle=".container" id="sidebar-toggle">
+    <i class="material-icons" style="font-size: 35px !important;">menu</i>
+  </a> -->
+<div class="content">
+<br style="width: 10%">
+ <div class="container" style="width: 100vw;">
+    <div id="message" style="text-align: center;">
+      <h3 style="color: black; font-family: 'Montserrat', sans-serif;font-size: 40px;color: blue;">Catalog</h3><hr>
+      <br>
+
+      <a style="background-color:transparent;width: 96vw;margin: 0px;
+       "data-toggle="collapse" data-target="#firstyrcatalog" id="autoheadID">
+      <h2 onclick="AUTO()"   >Auto</h2>
+      <div class="collapse"   id="firstyrcatalog">
+
+      <a data-toggle="collapse" class="panel-toggle" data-target="#co1subjects" style="width: 95vw;margin: 0 auto;"id="auto01ID" >
+        JOIN: <p style="display:inline" id="joinID">Loading...</p><br>
+          FROM: <p style="display:inline" id="fromID">Loading...</p><br>
+            TO: <p style="display:inline" id="toID">Loading...</p>
+             <button style="background-color: black;color: grey; border-radius: 10px;width: 96px;" onclick="incrementJOIN()">JOIN+1</button>
+      
+      <div  id="co1subjects"  style="width: 90%; margin: 0 auto; font-size: 20px;" class="collapse" ><hr>
+      NAME: <p id="nameID" style="display:inline" >Loading...</p><br>
+      MAKE a CALL: <p id="phoneID" style="display:inline" href="tel:+1-303-499-7111">Loading...</p><br>
+      TIME: <p id="timeID" style="display:inline" >Loading...</p><br>
+      </div></a><br>
+
+<br>
+  </div></div>
+<!-- <button onclick="retrieve();" style="margin-top: 80px;">Print test</button> --> 
+<table id="join" style="margin-top: 20%;">
+
+
+</table>
+
+<div class="button__holder">
+    <h2>Create Event </h2>
+    <button  class="plus"  onclick="window.location.href='input.html'"></button>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html> 

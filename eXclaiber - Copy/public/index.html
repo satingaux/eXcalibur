@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--  control the top header color -->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#304FFE">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#304FFE">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#304FFE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+<link rel="manifest" href="/manifest.json">
+<!-- Add to home screen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Template PWA">
+<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+<!-- Windows -->
+<meta name="msapplication-TileImage" content="favicon.jpg">
+<meta name="msapplication-TileColor" content="#304FFE">
+<link rel="icon"
+         type="image/png"
+         href="favicon.jpg">
+<title>Pool Up</title>
+<script src="script.js"></script>
+   <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+                           $(".container").addClass("open-sidebar");
+                           return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+      
+    </script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<div class="container">
+  <div id="sidebar" style="text-align: center;">
+    <i class="material-icons" style="font-size: 80px !important;">rv_hookup</i>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="UI.html">Explore</a></li>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Sign Out</a></li>
+    </ul>
+  </div>
+<div class="main-content">
+<div id="head">
+  <h1 style="margin-left: 20%;">Auto Pool</h1>
+</div>
+<div class="swipe-area"></div>
+  <a href="#" data-toggle=".container" id="sidebar-toggle">
+    <i class="material-icons" style="font-size: 35px !important;">menu</i>
+  </a>
+<div class="content">
+<br style="width: 10%">
+<!-- <button onclick="retrieve();" style="margin-top: 80px;">Print test</button> --> 
+<table id="join" style="margin-top: 20%;">
+<tr>
+    <th>Mode</th>
+    <th>Date</th>
+    <th>Time</th> \
+    <th>Origin</th> 
+    <th>Destination</th>
+    <th>Name</th>
+    <th>Mobile</th>
+    <th>Count</th>
+    <th>Join</th>
+  </tr>
+</table>
+
+<div class="button__holder">
+    <h2>Create Event </h2>
+    <button  class="plus"  onclick="window.location.href='input.html'"></button>
+</div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html> 

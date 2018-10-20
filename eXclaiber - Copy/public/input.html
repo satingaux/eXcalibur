@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<style>
+body {
+  font-family: Times New Roman;
+  font-style: italic;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=date], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=time], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+   
+
+<body>
+                <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase-firestore.js"></script>
+           
+        
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCngEfCc4ZN5GGYXIw1h5w1ir6j1Oicf2U",
+    authDomain: "letsjoinapool.firebaseapp.com",
+    databaseURL: "https://letsjoinapool.firebaseio.com",
+    projectId: "letsjoinapool",
+    storageBucket: "letsjoinapool.appspot.com",
+    messagingSenderId: "785993488579"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+    function insertInDbase(name,mobile,destination,date,time,Origin,Ptype){
+        var db = firebase.firestore();
+        db.collection(Ptype).doc().set({
+    name:name,
+    mobile:mobile,
+    destination:destination,
+    date:date,
+    time:time,
+    origin: Origin,
+    count:0
+})
+.then(function() {
+    console.log("Document successfully written!");
+})
+.catch(function(error) {
+    console.error("Error writing document: ", error);
+});
+    alert("pool created!! HAPPY JOURNEY");
+    document.getElementById("myForm").reset();
+}
+</script>
+<h3>START a pool!</h3>
+
+<div>
+  <form id="myForm" onsubmit="event.preventDefault(); callInsert();" >
+    <!-- prevents the default function on submit button click //onClick does not work with Submit button as Submit button ..it kind of refreshes before calling onClick)-->
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your name.." required>
+
+    <label for="Origin">Origin</label>
+    <input type="text" id="Origin" placeholder="Your Origin.." required>
+
+    <label for="destination">Destination</label>
+    <input type="text" id="destination" placeholder="Your destination.." required>
+
+    <label for="Ptype">Pool type</label>
+    <select id="Ptype" required>
+      <option value="Car">Car</option>
+      <option value="Auto">Auto</option>
+      <option value="Bike">Bike</option>
+      <option value="Barefoot">Barefoot</option>
+      <option value="Other">Other</option>
+    </select>
+  <label for="Mnumber">Mobile no:</label>
+  <input type="number" id="Mnumber" required>
+
+  <label for="date">Pooling Date</label>
+  <input type="date" id="date" required>
+
+  <label for="time">Time</label>
+  <input type="time" id="time" required>
+    <input type="submit" value="Create Pool">
+  </form>
+</div>
+<script>
+    function callInsert(){
+         var Name = document.getElementById("name").value;
+  var Destination = document.getElementById("destination").value;
+  var Ptype = document.getElementById("Ptype").value;
+  var Mnumber = document.getElementById("Mnumber").value;
+  var date = document.getElementById("date").value;
+  var time =document.getElementById("time").value;
+  var Origin = document.getElementById("Origin").value;
+  insertInDbase(Name,Mnumber,Destination,date,time,Origin,Ptype);
+    }
+    
+</script>
+
+</body>
+</html>
