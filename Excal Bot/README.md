@@ -1,4 +1,4 @@
-# CoLabTobiBot
+# Excal HR Model
 
 You can teach the ML to find bad applicants quicker because this is much easier to do
  - the HR person usually has gut reactions and reasons for why denying and we can find these
